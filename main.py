@@ -18,8 +18,8 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if len(message.mentions)>0 and message.mentions[0].id == client.user.id and message.channel.id == 918110471343734785:
+    if len(message.mentions)>0 and message.mentions[0].id == 553146370844917762 and message.channel.id == 918110471343734785:
         r = random.randint(0,len(myList)-1)
-        await message.channel.send(myList[r])
+        await message.reply(myList[r])
 
 client.run(os.getenv('TOKEN'))
