@@ -20,6 +20,6 @@ async def on_message(message):
 
     if len(message.mentions)>0 and message.mentions[0].id == 553146370844917762:
         r = random.randint(0,len(myList)-1)
-        await message.reply(myList[r])
+        await message.reply(myList[r] +" "+ message.author + " Tag Mat Kar")
 
 client.run(os.getenv('TOKEN'))
