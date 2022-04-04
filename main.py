@@ -2,7 +2,11 @@ from http import client
 import discord
 import os
 import dotenv
+import random
+from math import floor
 dotenv.load_dotenv()
+
+myList = ['Madharchod', 'Bhosdiwale', 'Behanchod', 'Ni Akka Ni Denguta', 'Bakchod', 'Randi Ke Bachhe', 'Behan Ke Lund', 'Randi Ke Pille']
 
 client = discord.Client()
 @client.event
@@ -13,8 +17,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    
-    if message.content.startswith('$help'):
-        await message.channel.send('<:jnl:954703014374031410>')
+
+    if len(message.mentions)>0 and message.mentions[0].id == client.user.id and message.channel.id == 918110471343734785:
+        r = random.randint(0,len(myList)-1)
+        await message.channel.send(myList[r])
 
 client.run(os.getenv('TOKEN'))
