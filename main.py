@@ -6,7 +6,7 @@ import random
 from math import floor
 dotenv.load_dotenv()
 
-myList = ['Madharchod', 'Bhosdiwale', 'Behanchod', 'Ni Akka Ni Denguta', 'Bakchod', 'Randi Ke Bachhe', 'Behan Ke Lund', 'Randi Ke Pille']
+myList = ['text1', 'text2', 'text3', 'text4', 'text5', 'text6', 'text7', 'text8']
 
 client = discord.Client()
 @client.event
