@@ -1,2 +1,3 @@
-# myFirstBot
-Learning Discord Bot using python 2022
+# Don't Tag Bot
+
+A discord bot to prevent users from tagging you by retagging them.
